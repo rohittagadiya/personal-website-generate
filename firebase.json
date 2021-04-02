@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/2019/03/12/making-a-piano/",
+        "destination": "/#/blog/2019/03/12/making-a-piano/",
+        "type": 301
+      }
+    ]
+  }
+}
