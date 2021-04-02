@@ -1,0 +1,30 @@
+---
+---
+@import url('https://unpkg.com/primer/build/build.css');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900');
+@import 'highlight-syntax';
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.github-component {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.repo-language-color {
+    filter: brightness(125%) !important;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    position: relative;
+    top: 2px;
+    width: 12px;
+}
+
+.article {
+  h1, h2, h3, h4,
+  .highlight {
+    margin-bottom: 16px;
+  }
+}
