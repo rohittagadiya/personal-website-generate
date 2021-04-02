@@ -1,0 +1,86 @@
+{% include header.html %}
+
+{% assign user = site.github.organization_members[0] %}
+
+<div class="d-md-flex">
+  <div class="position-md-fixed col-md-5 col-lg-4 col-xl-3 flex-self-stretch px-4 px-md-6 px-lg-7 py-6">
+    <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;">
+    <h1 class="mb-2 lh-condensed">{{ site.title }}</h1>
+    <p class="mb-4 f4 text-gray">
+      Hi! I'm Ben. I love two things: bridges and smiling. I'm an aspiring developer who is learning how to use GitHub to build the stuff I wish existed. I'm looking to meet other developers who can help to contribute to the projects I have started.
+    </p>
+    <div class="f4 mb-6">
+      <div class="mb-2">
+        {% octicon mark-github height:20 class:"mr-1 v-align-middle" aria-label:GitHub %}
+        <a href="https://github.com/{{ user.login }}">
+          @{{ user.login }}
+        </a>
+      </div>
+      <div class="mb-2">
+        {% octicon mail height:20 class:"mr-1 v-align-middle" aria-label:Email %}
+        <a href="mailto:{{ user.email }}">
+          {{ site.email }}
+        </a>
+      </div>
+      <div class="">
+        {% octicon location height:20 class:"mr-1 v-align-middle" aria-label:Location %}
+        Austin, TX
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-light offset-md-5 offset-lg-4 offset-xl-3 col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 border-md-left border-gray-light">
+    <div class="mx-auto" style="max-width: 900px;">
+      <h2>My Projects</h2>
+      <p class="f4 mb-4 text-gray">GitHub repositories that I've contributed to</p>
+      <div class="d-flex flex-wrap gutter-condensed mb-4">
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include repo-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include repo-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include repo-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include repo-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include repo-card.html %}
+        </div>
+      </div>
+
+      <h2>My Interests</h2>
+      <p class="f4 mb-4 text-gray">Topics that I want to learn more about</p>
+      <div class="d-flex flex-wrap gutter-condensed mb-4">
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include topic-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include topic-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include topic-card.html %}
+        </div>
+      </div>
+
+      <h2>My Organizations</h2>
+      <p class="f4 mb-4 text-gray">Teams I belong to</p>
+      <div class="d-flex flex-wrap gutter-condensed mb-4">
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include org-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include org-card.html %}
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+          {% include org-card.html %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,10 @@
+title: Brandon Rosage
+description: description XYZ
+email: brandon@github.com
+
+sass:
+  sass_dir: node_modules
+
+gems:
+  - jekyll-octicons
+  - jekyll-github-metadata
